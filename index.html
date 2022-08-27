@@ -9,25 +9,42 @@
   <script src="https://apis.google.com/js/api:client.js"></script>
 
 </head>
-<body>
-  
+<body>  
 
-<!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-  <div id="gSignInWrapper">
-    <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
-    </div>
-  </div>
-  <div id="name"></div>
+
+<form>
+  <input class="input" id="valorLitro" type="number" min="1" step="any" placeholder="Valor do litro">
+  <br>
+  <input class="input" id="quantidadeAbastecida" type="number" min="1" step="any" placeholder="Quantidade abastecida">
+  <br>
+  <input class="input" id="quilometragem" type="number" min="1" step="any" placeholder="Odômetro">
+  <br>
+  <input type="button" id="btnEnviar" value="Enviar">
+  <input type="button" id="btnReceber" value="Receber">
+</form>
+
+<table id="tabelaDeResultado">
+  <tr>
+    <th>Data</th>
+    <th>Quantidade</th>
+    <th>Valor</th>
+    <th>Total</th>
+    <th>Odômetro</th>
+    <th>Distância</th>
+    <th>KM/L</th>
+  </tr>
+</table>
 
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
 <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+<!-- Swal File Import
+    ------------------------------------------------------------------------------------------------------------------------ -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script defer src="./firebase.js"></script>
+<script defer src="./app.js"></script>
 
 
 </body>
