@@ -43,10 +43,5 @@ document.querySelector("#customBtn").addEventListener('click', e => {
   });
   document.querySelector("#customBtn").style.display = 'none'
 })
-/* logg out
-firebase.auth().signOut().then(() => {
-    // Sign-out successful.
-}).catch((error) => {
-  // An error happened.
-});
-*/
+
+firebase.auth().currentUser.uid != null ? :
