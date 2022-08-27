@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consumo</title>
   <link rel="stylesheet" href="./style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
@@ -14,22 +15,23 @@
 
 <form>
   <input class="input" id="valorLitro" type="number" min="1" step="any" placeholder="Valor do litro">
-  <br>
+  <br><br>
   <input class="input" id="quantidadeAbastecida" type="number" min="1" step="any" placeholder="Quantidade abastecida">
-  <br>
+  <br><br>
   <input class="input" id="quilometragem" type="number" min="1" step="any" placeholder="Odômetro">
-  <br>
-  <input type="button" id="btnEnviar" value="Enviar">
-  <input type="button" id="btnReceber" value="Receber">
+  <br><br>
+  <input class="input" type="button" id="btnEnviar" value="Enviar">
+  <br><br>
+  <input class="input" type="button" id="btnReceber" value="Receber">
 </form>
 
-<table id="tabelaDeResultado">
+<table id="tabelaDeResultado" style="display: none;">
   <tr>
     <th>Data</th>
-    <th>Quantidade</th>
+    <th>Litros</th>
     <th>Valor</th>
     <th>Total</th>
-    <th>Odômetro</th>
+    <th>KM</th>
     <th>Distância</th>
     <th>KM/L</th>
   </tr>

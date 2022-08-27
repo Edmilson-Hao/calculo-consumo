@@ -78,7 +78,8 @@ const failedSignal = () => {
 /*------------------------------------Print data from firebase----------------------------------------------*/
 const printFirebaseData = () => {
     if(docArray === []) return
-    tabelaDeResultado.innerHTML = '<tr><th>Data</th><th>Quantidade</th><th>Valor</th><th>Total</th><th>Odômetro</th><th>Distância</th><th>KM/L</th></tr>'
+    tabelaDeResultado.style.display = "block"
+    tabelaDeResultado.innerHTML = '<th>Data</th><th>Litros</th><th>Valor</th><th>Total</th><th>KM</th><th>Distância</th><th>KM/L</th>'
     
     docArray.forEach((item, index) => {
         let data = new Date(docArray[index].dataDeAbastecimento).toLocaleString()
@@ -87,8 +88,8 @@ const printFirebaseData = () => {
         let valAbas = docArray[index].valorLitro * docArray[index].quantidadeAbastecida
         let km = docArray[index].quilometragem
         let dist
-        index === docArray.length ? dist = km : dist = docArray[index].quilometragem - docArray[index+1].quilometragem
-        let kml = dist/quant
+        index === docArray.length ? dist = km : dist = Number(docArray[index].quilometragem - docArray[index+1].quilometragem).toFixed(2)
+        let kml = Number(dist/quant).toFixed(2)
 
         tabelaDeResultado.innerHTML += `
             <tr>
