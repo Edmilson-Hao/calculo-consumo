@@ -85,7 +85,7 @@ const printFirebaseData = () => {
         let data = new Date(docArray[index].dataDeAbastecimento).toLocaleString()
         let quant = docArray[index].quantidadeAbastecida
         let val = docArray[index].valorLitro
-        let valAbas = docArray[index].valorLitro * docArray[index].quantidadeAbastecida
+        let valAbas = Number(docArray[index].valorLitro * docArray[index].quantidadeAbastecida).toFixed(2)
         let km = docArray[index].quilometragem
         let dist
         index === docArray.length ? dist = km : dist = Number(docArray[index].quilometragem - docArray[index+1].quilometragem).toFixed(2)
