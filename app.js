@@ -137,6 +137,10 @@ const getFirebaseData = () => {
 
 
 
-/*------------------------------------Logg in when page is loaded-------------------------------------------*/
-document.body.onload = () => logInToFirebase()
+
+/*----------------------------------------Check if and Log In-----------------------------------------------*/
+firebase.auth().onAuthStateChanged( user => {
+  if (!user) logInToFirebase()
+  else console.log('Logged')
+})
 /*----------------------------------------------------------------------------------------------------------*/
