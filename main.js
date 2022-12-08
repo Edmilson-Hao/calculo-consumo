@@ -9,8 +9,8 @@ const dataDeAbastecimento = Date.now()
 
 let docArray = []
 
-btnEnviar.addEventListener('click', e => sendDataToFirebase())
-btnReceber.addEventListener('click', e => getFirebaseData())
+//btnEnviar.addEventListener('click', e => sendDataToFirebase())
+//btnReceber.addEventListener('click', e => getFirebaseData())
 
 
 
@@ -138,9 +138,9 @@ const getFirebaseData = () => {
 
 
 
-/*----------------------------------------Check if and Log In-----------------------------------------------*/
+/*----------------------------------------Check if and Log In-----------------------------------------------
 firebase.auth().onAuthStateChanged( user => {
   if (!user) logInToFirebase()
   else console.log('Logged')
 })
-/*----------------------------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------------------------*/

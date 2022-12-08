@@ -11,12 +11,15 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig)
 var ui = new firebaseui.auth.AuthUI(firebase.auth())
 const db = firebase.firestore()
+const auth = firebase.auth();
 //firebase.auth().currentUser.uid
 
 var provider = new firebase.auth.GoogleAuthProvider()
 provider.addScope('https://www.googleapis.com/auth/contacts.readonly')
 firebase.auth().useDeviceLanguage()
 
+
+//Login in with google -> running logInToFirebase() already works
 const logInToFirebase = () => {
 firebase.auth()
 .signInWithPopup(provider)

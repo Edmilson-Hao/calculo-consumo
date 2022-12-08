@@ -1,6 +1,7 @@
-body,*{
+body{
   margin: 0;
   padding: 0;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 #customBtn {
@@ -62,4 +63,24 @@ form > input{
 table {
   display: block;
   margin: 0 auto;
+}
+
+#login_container {
+  display: flex;
+  flex-direction: column;
+
+  vertical-align: middle;
+  justify-content: center;
+  width: 90vh;
+  height: 90vh;
+  border: 1px solid #000fff;
+  border-radius: 5px;
+  margin: 5vh auto 0;
+  text-align: center;
+}
+
+#google_logo{
+  margin: 0 auto 1vh;
+  border-bottom: 1px solid #000fff;
+  border-radius: 5px;
 }
